@@ -54,7 +54,7 @@ jobs:
         run: python scripts/build_pages.py
 
       - name: Check out directory content
-	run: ls -la ./out
+        run: ls -la ./out
 
       # ⑤ 发布到 gh-pages（GitHub Pages 会自动上线）
       - name: Publish to gh-pages
