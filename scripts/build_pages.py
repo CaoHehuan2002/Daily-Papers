@@ -7,6 +7,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 OUT_DIR = BASE_DIR / "out"
+OUT_MD = OUT_DIR / f"digest_{today}.md"
 
 # 读取markdown文件路径
 today = datetime.now().strftime("%Y-%m-%d")
@@ -123,6 +124,10 @@ def build_html():
     # 读取markdown内容
     with open(MD_PATH, "r", encoding="utf-8") as f:
         md_content = f.read()
+
+    # 同步一份markdown到out目录，按日期命名便于发布和查看
+    with open(OUT_MD, "w", encoding="utf-8") as f:
+        f.write(md_content)
     
     # 转换为html
     html_content = markdown_to_html(md_content)

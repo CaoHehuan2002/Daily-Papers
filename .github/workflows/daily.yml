@@ -53,7 +53,16 @@ jobs:
       - name: Build pages
         run: python scripts/build_pages.py
 
-      # ⑤ 发布到 gh-pages（GitHub Pages 会自动上线）
+      # ⑤ 提交 out 到 main
+      - name: Commit out to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add out
+          git diff --cached --quiet || git commit -m "chore: update out"
+          git push origin HEAD:main
+
+      # ⑥ 同步到 gh-pages（GitHub Pages 会自动上线）
       - name: Publish to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
