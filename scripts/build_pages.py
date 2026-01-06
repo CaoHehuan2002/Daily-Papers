@@ -4,8 +4,8 @@ from datetime import datetime
 import glob
 
 # 配置路径
-MD_DIR = "../data"
-OUTPUT_DIR = "../out"
+MD_DIR = "./data"
+OUTPUT_DIR = "./out"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # HTML模板（极简美观，适配论文列表）
