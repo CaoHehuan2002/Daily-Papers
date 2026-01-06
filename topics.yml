@@ -1,35 +1,21 @@
 profiles:
-  - name: protein_structure
+  - name: RNA_structure_prediction
     include:
-      - "protein structure"
-      - "protein folding"
-      - "protein modeling"
-      - "protein design"
-      - "protein engineering"
+      - "RNA secondary structure"
+      - "RNA structure"
+      - "RNA stucture predicition"
+      - "protein-RNA interaction"
     exclude:
       - plant
       - crop
       - agriculture
 
-  - name: dna_binding
+  - name: RNA_design
     include:
-      - "DNA binding"
-      - "DNA-binding protein"
-      - "protein-DNA interaction"
-      - "transcription factor"
-      - "TF binding"
-      - "DNA recognition"
+      - "RNA design"
+      - "RNA sequence design"
+      - "RNA structure design"
     exclude:
       - plant
       - agriculture
 
-  - name: bioinformatics
-    include:
-      - "protein sequence analysis"
-      - "protein function prediction"
-      - "structural bioinformatics"
-      - "molecular docking"
-      - "molecular dynamics"
-    exclude:
-      - plant
-      - agriculture
