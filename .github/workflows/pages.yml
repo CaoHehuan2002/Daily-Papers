@@ -1,0 +1,44 @@
+name: Daily Digest to Pages
+on:
+  schedule:
+    - cron: '30 23 * * *'   # 每天 23:30 UTC ≈ 次日 08:30 JST
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Fetch arXiv
+        run: |
+          python scripts/fetch_arxiv.py --days 2 --max 150 --profiles protein_structure dna_binding bioinformatics
+
+      # 用 Qwen 生成摘要（覆盖 digest_YYYY-MM-DD.md）
+      - name: Summarize with Qwen
+        env:
+          QWEN_API_KEY: ${{ secrets.QWEN_API_KEY }}
+        run: |
+          python scripts/summarize_qwen.py --date $(date -u +%F) --limit 40
+
+      - name: Build pages
+        run: |
+          python scripts/build_pages.py
+
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          publish_branch: gh-pages

@@ -1,0 +1,35 @@
+profiles:
+  - name: protein_structure
+    include:
+      - "protein structure"
+      - "protein folding"
+      - "protein modeling"
+      - "protein design"
+      - "protein engineering"
+    exclude:
+      - plant
+      - crop
+      - agriculture
+
+  - name: dna_binding
+    include:
+      - "DNA binding"
+      - "DNA-binding protein"
+      - "protein-DNA interaction"
+      - "transcription factor"
+      - "TF binding"
+      - "DNA recognition"
+    exclude:
+      - plant
+      - agriculture
+
+  - name: bioinformatics
+    include:
+      - "protein sequence analysis"
+      - "protein function prediction"
+      - "structural bioinformatics"
+      - "molecular docking"
+      - "molecular dynamics"
+    exclude:
+      - plant
+      - agriculture
