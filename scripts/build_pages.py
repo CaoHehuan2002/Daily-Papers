@@ -43,6 +43,10 @@ def markdown_to_html(md_content):
             continue
         # 匹配主题标题（# 主题名）
         if line.startswith("# ") and not line.startswith("## "):
+            # 切换主题之前关闭上一块，避免混乱的嵌套
+            if in_paper:
+                html += "        </div>\n"
+                in_paper = False
             if in_topic:
                 html += "    </div>\n"
             topic_name = line[2:]
