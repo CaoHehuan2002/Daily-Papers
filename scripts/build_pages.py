@@ -1,13 +1,19 @@
 import json
 import os
 from datetime import datetime
+from pathlib import Path
+
+# 解析项目根目录，确保无论从哪里运行都写入仓库内。
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = BASE_DIR / "data"
+OUT_DIR = BASE_DIR / "out"
 
 # 读取markdown文件路径
 today = datetime.now().strftime("%Y-%m-%d")
-MD_PATH = f"../data/digest_{today}.md"
+MD_PATH = DATA_DIR / f"digest_{today}.md"
 # 输出目录（仓库根目录下的out）
-os.makedirs("../out", exist_ok=True)
-HTML_PATH = "../out/index.html"
+os.makedirs(OUT_DIR, exist_ok=True)
+HTML_PATH = OUT_DIR / "index.html"
 
 def markdown_to_html(md_content):
     """简易的markdown转html（适配当前日报格式）"""

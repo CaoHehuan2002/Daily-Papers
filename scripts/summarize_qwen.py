@@ -2,16 +2,18 @@ import json
 import os
 import time
 from datetime import datetime
+from pathlib import Path
 import requests
 
-# 读取爬取的论文数据（与 fetch_arxiv.py 的汇总输出保持一致）
-INPUT_PATH = "../data/arxiv_all.json"
-OUTPUT_DIR = "../data"
+# 解析项目根目录，确保无论从哪里运行都写入仓库内。
+BASE_DIR = Path(__file__).resolve().parent.parent
+OUTPUT_DIR = BASE_DIR / "data"
+INPUT_PATH = OUTPUT_DIR / "arxiv_all.json"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # 获取当日日期（用于生成markdown文件名）
 today = datetime.now().strftime("%Y-%m-%d")
-OUTPUT_MD = f"{OUTPUT_DIR}/digest_{today}.md"
+OUTPUT_MD = OUTPUT_DIR / f"digest_{today}.md"
 
 # 读取通义千问API_KEY
 QWEN_API_KEY = os.getenv("QWEN_API_KEY")

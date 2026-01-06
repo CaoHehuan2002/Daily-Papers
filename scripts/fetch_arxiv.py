@@ -3,15 +3,21 @@ import arxiv
 import json
 import os
 from datetime import datetime, timedelta
+from pathlib import Path
+
+# 解析项目根目录，确保无论从哪里运行都写入仓库内。
+BASE_DIR = Path(__file__).resolve().parent.parent
+DATA_DIR = BASE_DIR / "data"
+TOPICS_PATH = BASE_DIR / "topics.yml"
 
 # 读取根目录的topics.yml配置文件
-with open("topics.yml", "r", encoding="utf-8") as f:
+with open(TOPICS_PATH, "r", encoding="utf-8") as f:
     config = yaml.safe_load(f)
 
 # 创建data目录（自动生成）
-os.makedirs("../data", exist_ok=True)
+os.makedirs(DATA_DIR, exist_ok=True)
 # 汇总文件路径（保留所有论文）
-ALL_OUTPUT_PATH = "../data/arxiv_all.json"
+ALL_OUTPUT_PATH = DATA_DIR / "arxiv_all.json"
 
 def fetch_papers_by_topic():
     all_papers = []
@@ -69,7 +75,7 @@ def fetch_papers_by_topic():
         
         # 核心改动：为每个主题生成独立的json文件
         topic_json_name = f"arxiv_{topic_name.replace(' ','_')}.json"
-        topic_json_path = f"../data/{topic_json_name}"
+        topic_json_path = DATA_DIR / topic_json_name
         with open(topic_json_path, "w", encoding="utf-8") as f:
             json.dump(topic_papers, f, ensure_ascii=False, indent=2)
         print(f"{topic_name} 主题爬取完成，共 {len(topic_papers)} 篇，保存至 {topic_json_name}")
