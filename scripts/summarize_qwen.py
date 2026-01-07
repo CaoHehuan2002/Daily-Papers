@@ -38,7 +38,7 @@ def get_qwen_summary(text):
         "model": "qwen-turbo",
         "input": {
             "messages": [
-                {"role": "user", "content": f"请用简洁的中文总结这篇论文的核心创新点和研究内容，100字以内：{text}"}
+                {"role": "user", "content": f"请用简洁中文提炼这篇论文的要点，输出一行结构化文本，控制在110~150字。格式固定为：问题：...；方法：...；结果：...。如信息不足，对应项写“无”。避免空话、夸张和泛泛而谈。正文如下：{text}"}
             ]
         },
         "parameters": {"result_format": "text"}
