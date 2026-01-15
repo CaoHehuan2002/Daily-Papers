@@ -80,9 +80,8 @@ def extract_topic_content(digest_content, topic_name):
 def main():
     try:
         # 1. 定位仓库根目录并切换工作目录（不变）
-        script_file = Path(__file__).resolve()
-        repo_root_dir = script_file.parent.parent
-        print(f"切换工作目录到仓库根目录：{repo_root_dir}")
+        repo_root_dir = Path(os.getenv("GITHUB_WORKSPACE", str(Path(__file__).resolve().parent.parent)))
+	print(f"切换工作目录到仓库根目录：{repo_root_dir}")
         os.chdir(repo_root_dir)
 
         # 2. 先切换到 main 分支，读取 topic.json 并提取 topic_names（核心修改）
