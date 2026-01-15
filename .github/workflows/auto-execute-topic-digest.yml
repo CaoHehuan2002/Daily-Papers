@@ -1,0 +1,62 @@
+# 工作流名称（在 GitHub Actions 面板中显示的名称）
+name: Auto Execute Topic Digest Script
+
+# 触发条件：1. 定时任务；2. 手动触发（方便测试，可选）
+on:
+  # 定时触发配置（cron 表达式，UTC 时间，需转换为北京时间：北京时间 = UTC 时间 + 8 小时）
+  schedule:
+    # 配置：每日北京时间 8:00 执行（对应 UTC 时间 0:00）
+    # cron 表达式格式：分 时 日 月 周
+    - cron: '0 1 * * *'
+  # 允许手动在 GitHub 页面触发该工作流（测试阶段必备，调试完成后可保留）
+  workflow_dispatch:
+
+# 工作流执行的任务集合
+jobs:
+  auto-generate-and-push:
+    # 运行环境：选择最新版 Ubuntu（稳定，且内置 Git、Python 环境）
+    runs-on: ubuntu-latest
+    steps:
+      # 步骤 1：克隆仓库到自动化环境（获取完整仓库文件）
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 克隆完整仓库历史，确保分支切换正常
+
+      # 步骤 2：配置 Python 环境（匹配脚本运行需求，Python 3.8+ 即可）
+      - name: Setup Python Environment
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'  # 推荐 3.10+，兼容所有内置标准库
+          cache: 'pip'  # 缓存 pip 依赖（本脚本无第三方依赖，仅提升后续扩展效率）
+
+      # 步骤 3：配置 Git 身份（关键！解决自动化环境 Git 无提交身份的报错）
+      - name: Configure Git Identity
+        run: |
+          git config --global user.name "GitHub Actions Auto Bot"  # 用户名可自定义
+          git config --global user.email "actions-bot@github.com"  # 邮箱可自定义
+
+      # 步骤 4：执行 Python 脚本（核心步骤，运行 scripts 下的脚本）
+      - name: Run Topic Digest Python Script
+        run: |
+          # 直接在仓库根目录执行 scripts 下的 Python 脚本
+          # 脚本内部会自动切换工作目录、处理分支逻辑，无需额外操作
+          python3 scripts/generate_topic_digest.py
+
+      # 步骤 5：推送变更（兜底保障，脚本内已包含推送逻辑，此步骤可选，防止脚本推送失败）
+      - name: Ensure Push to gh-pages (Fallback)
+        if: success()  # 仅当前面步骤执行成功时才运行
+        run: |
+          # 检查是否有未推送的变更，有则推送
+          if [[ -n $(git status --porcelain) ]]; then
+            git add .
+            current_date=$(date +'%Y-%m-%d')
+            git commit -m "feat: 自动化同步${current_date} digest内容（兜底推送）"
+            git push origin gh-pages
+            echo "兜底推送 gh-pages 分支成功！"
+          else
+            echo "无变更需要推送，跳过兜底步骤。"
+          fi
+        # 注入 GitHub 内置令牌，解决推送权限问题（核心！）
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
