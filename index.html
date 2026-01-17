@@ -3,7 +3,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>arXiv 论文日报 2026-01-16</title>
+    <title>arXiv 论文日报 2026-01-17</title>
     <style>
         body { font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; }
         h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
@@ -18,19 +18,142 @@
     </style>
 </head>
 <body>
-    <h1>arXiv 论文日报 - 2026-01-16</h1>
+    <h1>arXiv 论文日报 - 2026-01-17</h1>
     <div class="topic-section">
-        <h2>arXiv 论文日报 2026-01-16</h2>
+        <h2>arXiv 论文日报 2026-01-17</h2>
+    </div>
+    <div class="topic-section">
+        <h2>RNA_structure_prediction</h2>
+        <div class="paper-item">
+            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10716v1" target="_blank">WildRayZer: Self-supervised Large View Synthesis in Dynamic Environments</a></div>
+            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10716v1</div>
+            <div class="paper-meta"><strong>作者:</strong> Xuweiyi Chen, Wentao Zhou, Zezhou Cheng</div>
+            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 18:59</div>
+            <div class="paper-meta"><strong>论文摘要:</strong> We present WildRayZer, a self-supervised framework for novel view synthesis (NVS) in dynamic environments where both the camera and objects move. Dynamic content breaks the multi-view consistency that static NVS models rely on, leading to ghosting, hallucinated geometry, and unstable pose estimation. WildRayZer addresses this by performing an analysis-by-synthesis test: a camera-only static renderer explains rigid structure, and its residuals reveal transient regions. From these residuals, we co</div>
+            <div class="paper-meta"><strong>核心总结:</strong> 问题：动态环境中新视角合成面临多视角不一致导致的鬼影、几何幻觉和姿态不稳定；方法：WildRayZer通过分析-合成测试，利用仅相机的静态渲染器解释刚性结构并检测瞬态区域；结果：无。</div>
+        </div>
+        <div class="paper-item">
+            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10715v1" target="_blank">DInf-Grid: A Neural Differential Equation Solver with Differentiable Feature Grids</a></div>
+            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10715v1</div>
+            <div class="paper-meta"><strong>作者:</strong> Navami Kairanda, Shanthika Naik, Marc Habermann, Avinash Sharma, Christian Theobalt, Vladislav Golyanik</div>
+            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 18:59</div>
+            <div class="paper-meta"><strong>论文摘要:</strong> We present a novel differentiable grid-based representation for efficiently solving differential equations (DEs). Widely used architectures for neural solvers, such as sinusoidal neural networks, are coordinate-based MLPs that are both computationally intensive and slow to train. Although grid-based alternatives for implicit representations (e.g., Instant-NGP and K-Planes) train faster by exploiting signal structure, their reliance on linear interpolation restricts their ability to compute highe</div>
+            <div class="paper-meta"><strong>核心总结:</strong> 问题：传统神经求解器计算效率低，网格表示依赖线性插值限制精度；方法：提出一种新的可微网格表示方法；结果：提升求解微分方程的效率和精度。</div>
+        </div>
+        <div class="paper-item">
+            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10702v1" target="_blank">Grounding Agent Memory in Contextual Intent</a></div>
+            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10702v1</div>
+            <div class="paper-meta"><strong>作者:</strong> Ruozhen Yang, Yucheng Jiang, Yueqi Jiang, Priyanka Kargupta, Yunyi Zhang, Jiawei Han</div>
+            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 18:55</div>
+            <div class="paper-meta"><strong>论文摘要:</strong> Deploying large language models in long-horizon, goal-oriented interactions remains challenging because similar entities and facts recur under different latent goals and constraints, causing memory systems to retrieve context-mismatched evidence. We propose STITCH (Structured Intent Tracking in Contextual History), an agentic memory system that indexes each trajectory step with a structured retrieval cue, contextual intent, and retrieves history by matching the current step's intent. Contextual</div>
+            <div class="paper-meta"><strong>核心总结:</strong> 问题：长周期目标导向交互中，记忆系统因实体和事实重复导致上下文不匹配；方法：提出STITCH，通过结构化检索线索和上下文意图进行历史检索；结果：无。</div>
+        </div>
+        <div class="paper-item">
+            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10700v1" target="_blank">LIBERTy: A Causal Framework for Benchmarking Concept-Based Explanations of LLMs with Structural Counterfactuals</a></div>
+            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10700v1</div>
+            <div class="paper-meta"><strong>作者:</strong> Gilat Toker, Nitay Calderon, Ohad Amosy, Roi Reichart</div>
+            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 18:54</div>
+            <div class="paper-meta"><strong>论文摘要:</strong> Concept-based explanations quantify how high-level concepts (e.g., gender or experience) influence model behavior, which is crucial for decision-makers in high-stakes domains. Recent work evaluates the faithfulness of such explanations by comparing them to reference causal effects estimated from counterfactuals. In practice, existing benchmarks rely on costly human-written counterfactuals that serve as an imperfect proxy. To address this, we introduce a framework for constructing datasets contai</div>
+            <div class="paper-meta"><strong>核心总结:</strong> 问题：如何提高概念解释的可信度；方法：引入框架构建数据集以生成更可靠的反事实；结果：无。</div>
+        </div>
+        <div class="paper-item">
+            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10698v1" target="_blank">Madelung hydrodynamics of spin-orbit coupling: action principles, currents, and correlations</a></div>
+            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10698v1</div>
+            <div class="paper-meta"><strong>作者:</strong> Cesare Tronci</div>
+            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 18:54</div>
+            <div class="paper-meta"><strong>论文摘要:</strong> We exploit the variational and Hamiltonian structures of quantum hydrodynamics with spin to unfold the correlation and torque mechanisms accompanying spin-orbit coupling (SOC) in electronic motion. Using Hamilton's action principle for the Pauli equation, we isolate SOC-induced quantum forces that act on the orbital Madelung--Bohm trajectories and complement the usual force terms known to appear in quantum hydrodynamics with spin. While the latter spin-hydrodynamic forces relate to the quantum g</div>
+            <div class="paper-meta"><strong>核心总结:</strong> 问题：电子运动中自旋-轨道耦合的关联与扭矩机制；方法：利用量子流体力学的变分和哈密顿结构分析自旋轨道耦合；结果：识别出SOC引起的量子力并补充了自旋流体力学中的力项。</div>
+        </div>
+        <div class="paper-item">
+            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10695v1" target="_blank">Quantum geometry of the rotating shallow water model</a></div>
+            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10695v1</div>
+            <div class="paper-meta"><strong>作者:</strong> Sriram Ganeshan, Alan T. Dorsey</div>
+            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 18:52</div>
+            <div class="paper-meta"><strong>论文摘要:</strong> The rotating shallow water equations (RSWE) are a mainstay of atmospheric and oceanic modeling, and their wave dynamics has close analogues in settings ranging from two-dimensional electron gases to active-matter fluids. While recent work has emphasized the topological character of RSWE wave bands, here we develop a complementary quantum-geometric description by computing the full quantum geometric tensor (QGT) for the linearized RSWE on an $f$-plane. The QGT unifies two pieces of band geometry:</div>
+            <div class="paper-meta"><strong>核心总结:</strong> 问题：旋转浅水方程的波动力学几何描述不足；方法：计算线性化旋转浅水方程在f-平面上的量子几何张量；结果：揭示波带几何统一特性。</div>
+        </div>
+        <div class="paper-item">
+            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10688v1" target="_blank">An Extension-Based Accessibility Framework for Making Blockly Accessible to Blind and Low-Vision Users</a></div>
+            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10688v1</div>
+            <div class="paper-meta"><strong>作者:</strong> Rubel Hassan Mollik, Vamsi Krishna Kosuri, Hans Djalali, Stephanie Ludi, Aboubakar Mountapmbeme</div>
+            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 18:48</div>
+            <div class="paper-meta"><strong>论文摘要:</strong> Block-based programming environments (BBPEs) such as Scratch and Code.org are now widely used in K-12 computer science classes, but they remain mostly inaccessible to blind or visually impaired (BVI) learners. A major problem is that prior accessibility solutions have relied on modifications to the Blockly library, making them difficult to apply in existing BBPEs and thereby limiting adoption. We present an Extension-based Accessibility Framework (EAF) to make BBPEs accessible for BVI students.</div>
+            <div class="paper-meta"><strong>核心总结:</strong> 问题：BBPEs对视障学生不友好；方法：提出基于扩展的可访问性框架（EAF）；结果：无需修改Blockly库即可提升可访问性。</div>
+        </div>
+        <div class="paper-item">
+            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10686v1" target="_blank">Vertex operator algebra bundles on modular curves and their associated modular forms</a></div>
+            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10686v1</div>
+            <div class="paper-meta"><strong>作者:</strong> Daniel Barake, Owen Chuchman, Cameron Franc, Geoffrey Mason, Brett Nasserden</div>
+            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 18:46</div>
+            <div class="paper-meta"><strong>论文摘要:</strong> This paper describes the vector bundle on the elliptic modular curve that is associated to a vertex operator algebra $V$ (VOA) or more generally a quasi-vertex operator algebra (QVOA), with a view towards future applications aimed at studying the characters of VOAs. We explain how the modes of sections of $V$ give rise naturally to $V$-valued quasi-modular forms. The space $Q(V)$ of $V$-valued quasi-modular forms is endowed with the structure of a doubled QVOA, and in particular the algebra $Q$</div>
+            <div class="paper-meta"><strong>核心总结:</strong> 问题：研究与顶点算子代数相关的向量丛及其在模曲线上的应用；方法：通过VOA的截面模式构造V-值拟模形式，赋予其双重QVOA结构；结果：揭示了V-值拟模形式空间的代数结构。</div>
+        </div>
+        <div class="paper-item">
+            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10684v1" target="_blank">On the origin of neural scaling laws: from random graphs to natural language</a></div>
+            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10684v1</div>
+            <div class="paper-meta"><strong>作者:</strong> Maissam Barkeshli, Alberto Alfarano, Andrey Gromov</div>
+            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 18:46</div>
+            <div class="paper-meta"><strong>论文摘要:</strong> Scaling laws have played a major role in the modern AI revolution, providing practitioners predictive power over how the model performance will improve with increasing data, compute, and number of model parameters. This has spurred an intense interest in the origin of neural scaling laws, with a common suggestion being that they arise from power law structure already present in the data. In this paper we study scaling laws for transformers trained to predict random walks (bigrams) on graphs with</div>
+            <div class="paper-meta"><strong>核心总结:</strong> 问题：研究Transformer在图上随机游走预测任务中的缩放规律；方法：分析模型性能随数据、计算和参数变化的规律；结果：未明确给出具体结果。</div>
+        </div>
     </div>
     <div class="topic-section">
         <h2>RNA_design</h2>
+        <div class="paper-item">
+            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10706v1" target="_blank">UFO Trees: Practical and Provably-Efficient Parallel Batch-Dynamic Trees</a></div>
+            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10706v1</div>
+            <div class="paper-meta"><strong>作者:</strong> Quinten De Man, Atharva Sharma, Kishen N Gowda, Laxman Dhulipala</div>
+            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 18:57</div>
+            <div class="paper-meta"><strong>论文摘要:</strong> The dynamic trees problem is to maintain a tree under edge updates while supporting queries like connectivity queries or path queries. Despite the first data structure for this fundamental problem -- the link-cut tree -- being invented 40 years ago, our experiments reveal that they are still the fastest sequential data structure for the problem. However, link-cut trees cannot support parallel batch-dynamic updates and have limitations on the kinds of queries they support.   In this paper, we des</div>
+            <div class="paper-meta"><strong>核心总结:</strong> 问题：动态树维护与查询；方法：提出新数据结构支持并行批量更新和扩展查询类型；结果：性能优于传统link-cut树。</div>
+        </div>
+        <div class="paper-item">
+            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10697v1" target="_blank">Perfect Secret Key Generation for a class of Hypergraphical Sources</a></div>
+            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10697v1</div>
+            <div class="paper-meta"><strong>作者:</strong> Manuj Mukherjee, Sagnik Chatterjee, Alhad Sethi</div>
+            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 18:53</div>
+            <div class="paper-meta"><strong>论文摘要:</strong> Nitinawarat and Narayan proposed a perfect secret key generation scheme for the so-called \emph{pairwise independent network (PIN) model} by exploiting the combinatorial properties of the underlying graph, namely the spanning tree packing rate. This work considers a generalization of the PIN model where the underlying graph is replaced with a hypergraph, and makes progress towards designing similar perfect secret key generation schemes by exploiting the combinatorial properties of the hypergraph</div>
+            <div class="paper-meta"><strong>核心总结:</strong> 问题：传统PIN模型的密钥生成方案推广至超图模型；方法：利用超图的组合特性，如生成树打包率；结果：提出改进的完美密钥生成方案。</div>
+        </div>
+        <div class="paper-item">
+            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10696v1" target="_blank">The Impact of Generative AI on Architectural Conceptual Design: Performance, Creative Self-Efficacy and Cognitive Load</a></div>
+            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10696v1</div>
+            <div class="paper-meta"><strong>作者:</strong> Han Jiang, Yao Xiao, Rachel Hurley, Shichao Liu</div>
+            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 18:52</div>
+            <div class="paper-meta"><strong>论文摘要:</strong> Our study examines how generative AI (GenAI) influences performance, creative self-efficacy, and cognitive load in architectural conceptual design tasks. Thirty-six student participants from Architectural Engineering and other disciplines completed a two-phase architectural design task, first independently and then with external tools (GenAI-assisted condition and control condition using an online repository of existing architectural projects). Design outcomes were evaluated by expert raters, wh</div>
+            <div class="paper-meta"><strong>核心总结:</strong> 问题：GenAI对建筑概念设计任务中的表现、创造性自我效能感和认知负荷的影响；方法：36名学生完成两阶段设计任务，对比使用GenAI工具与传统资源的条件；结果：无。</div>
+        </div>
+        <div class="paper-item">
+            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10692v1" target="_blank">Finite-momentum Cooper plasmons in superconducting terahertz microcavities</a></div>
+            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10692v1</div>
+            <div class="paper-meta"><strong>作者:</strong> Alex M. Potts, Marios H. Michael, Gunda Kipp, Sara M. Langner, Hope M. Bretscher, Jonathan Stensberg, Kelson Kaj, Toru Matsuyama, Matthew W. Day, Felix Sturm, Abhay K. Nayak, Liam A. Cohen, Xiaoyang Z</div>
+            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 18:50</div>
+            <div class="paper-meta"><strong>论文摘要:</strong> The phase mode of a superconductor's order parameter encodes fundamental information about pairing and dissipation, but is typically inaccessible at low frequencies due to the Anderson-Higgs mechanism. Superconducting samples thinner than the London penetration depth, however, support a gapless phase mode whose dispersion can be reshaped by a proximal screening layer. Here, we theoretically and experimentally show that this screened phase mode in a superconducting thin film integrated into on-ch</div>
+            <div class="paper-meta"><strong>核心总结:</strong> 问题：超导体序参量的相位模式在低频下通常不可见；方法：利用薄超导样品与邻近屏蔽层结合，调控相位模式；结果：实现可调控的无能隙相位模式。</div>
+        </div>
+        <div class="paper-item">
+            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10691v1" target="_blank">The Conversational Exam: A Scalable Assessment Design for the AI Era</a></div>
+            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10691v1</div>
+            <div class="paper-meta"><strong>作者:</strong> Lorena A. Barba, Laura Stegner</div>
+            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 18:50</div>
+            <div class="paper-meta"><strong>论文摘要:</strong> Traditional assessment methods collapse when students use generative AI to complete work without genuine engagement, creating an illusion of competence where they believe they're learning but aren't. This paper presents the conversational exam -- a scalable oral examination format that restores assessment validity by having students code live while explaining their reasoning. Drawing on human-computer interaction principles, we examined 58 students in small groups across just two days, demonstra</div>
+            <div class="paper-meta"><strong>核心总结:</strong> 问题：传统评估方法在学生使用生成式AI完成任务时失效；方法：提出对话式考试，通过实时编码并解释思路进行评估；结果：在两天内对58名学生进行测试，验证了该方法的有效性。</div>
+        </div>
+        <div class="paper-item">
+            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10673v1" target="_blank">Single-Stage Huffman Encoder for ML Compression</a></div>
+            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10673v1</div>
+            <div class="paper-meta"><strong>作者:</strong> Aditya Agrawal, Albert Magyar, Hiteshwar Eswaraiah, Patrick Sheridan, Pradeep Janedula, Ravi Krishnan Venkatesan, Krishna Nair, Ravi Iyer</div>
+            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 18:37</div>
+            <div class="paper-meta"><strong>论文摘要:</strong> Training and serving Large Language Models (LLMs) require partitioning data across multiple accelerators, where collective operations are frequently bottlenecked by network bandwidth. Lossless compression using Huffman codes is an effective way to alleviate the issue, however, its three-stage design requiring on-the-fly frequency analysis, codebook generation and transmission of codebook along with data introduces computational, latency and data overheads which are prohibitive for latency-sensit</div>
+            <div class="paper-meta"><strong>核心总结:</strong> 问题：大语言模型训练和推理中，数据跨加速器划分导致集体操作受网络带宽瓶颈；方法：使用无损压缩的霍夫曼编码减少传输数据量；结果：三阶段设计引入计算、延迟和数据开销，对低延迟场景不友好。</div>
+        </div>
         <div class="paper-item">
             <div class="paper-title"><a href="http://arxiv.org/abs/2601.10671v1" target="_blank">Safe Trajectory Gradient Flow Control of a Grid-Interfacing Inverter</a></div>
             <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10671v1</div>
             <div class="paper-meta"><strong>作者:</strong> Trager Joswig-Jones, Baosen Zhang</div>
             <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 18:36</div>
             <div class="paper-meta"><strong>论文摘要:</strong> Grid-interfacing inverters serve as the interface between renewable energy resources and the electric power grid, offering fast, programmable control capabilities. However, their operation is constrained by hardware limitations, such as bounds on the current magnitude. Existing control methods for these systems often neglect these constraints during controller design and instead rely on ad hoc limiters, which can introduce instability or degrade performance. In this work, we present a control fr</div>
-            <div class="paper-meta"><strong>核心总结:</strong> 问题：电网接口逆变器受硬件限制影响，传统控制方法忽略约束导致性能下降；方法：提出一种考虑硬件限制的控制框架；结果：提升系统稳定性与性能。</div>
+            <div class="paper-meta"><strong>核心总结:</strong> 问题：电网接口逆变器受硬件限制影响，现有控制方法忽视约束导致性能下降；方法：提出一种考虑硬件约束的控制框架；结果：提升系统稳定性与性能。</div>
         </div>
         <div class="paper-item">
             <div class="paper-title"><a href="http://arxiv.org/abs/2601.10657v1" target="_blank">PACEvolve: Enabling Long-Horizon Progress-Aware Consistent Evolution</a></div>
@@ -38,7 +161,7 @@
             <div class="paper-meta"><strong>作者:</strong> Minghao Yan, Bo Peng, Benjamin Coleman, Ziqi Chen, Zhouhang Xie, Zhankui He, Noveen Sachdeva, Isabella Ye, Weili Wang, Chi Wang, Ed H. Chi, Wang-Cheng Kang, Derek Zhiyuan Cheng, Beidou Wang</div>
             <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 18:25</div>
             <div class="paper-meta"><strong>论文摘要:</strong> Large Language Models (LLMs) have emerged as powerful operators for evolutionary search, yet the design of efficient search scaffolds remains ad hoc. While promising, current LLM-in-the-loop systems lack a systematic approach to managing the evolutionary process. We identify three distinct failure modes: Context Pollution, where experiment history biases future candidate generation; Mode Collapse, where agents stagnate in local minima due to poor exploration-exploitation balance; and Weak Collab</div>
-            <div class="paper-meta"><strong>核心总结:</strong> 问题：LLM进化搜索中存在上下文污染、模式崩溃和协作薄弱等失败模式；方法：提出系统化框架以管理进化过程；结果：提升搜索效率与探索能力。</div>
+            <div class="paper-meta"><strong>核心总结:</strong> 问题：LLM进化搜索中存在上下文污染、模式崩溃和协作薄弱等失败模式；方法：识别并分析三种失败模式；结果：提出系统化管理进化过程的方法。</div>
         </div>
         <div class="paper-item">
             <div class="paper-title"><a href="http://arxiv.org/abs/2601.10644v1" target="_blank">RoutIR: Fast Serving of Retrieval Pipelines for Retrieval-Augmented Generation</a></div>
@@ -46,7 +169,7 @@
             <div class="paper-meta"><strong>作者:</strong> Eugene Yang, Andrew Yates, Dawn Lawrie, James Mayfield, Trevor Adriaanse</div>
             <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 18:04</div>
             <div class="paper-meta"><strong>论文摘要:</strong> Retrieval models are key components of Retrieval-Augmented Generation (RAG) systems, which generate search queries, process the documents returned, and generate a response. RAG systems are often dynamic and may involve multiple rounds of retrieval. While many state-of-the-art retrieval methods are available through academic IR platforms, these platforms are typically designed for the Cranfield paradigm in which all queries are known up front and can be batch processed offline. This simplificatio</div>
-            <div class="paper-meta"><strong>核心总结:</strong> 问题：传统检索模型不适应RAG系统多轮动态检索需求；方法：分析现有IR平台与RAG场景的不匹配；结果：无。</div>
+            <div class="paper-meta"><strong>核心总结:</strong> 问题：传统检索模型不适用于动态多轮RAG系统；方法：分析现有IR平台与RAG需求的不匹配；结果：无。</div>
         </div>
         <div class="paper-item">
             <div class="paper-title"><a href="http://arxiv.org/abs/2601.10632v1" target="_blank">CoMoVi: Co-Generation of 3D Human Motions and Realistic Videos</a></div>
@@ -54,122 +177,7 @@
             <div class="paper-meta"><strong>作者:</strong> Chengfeng Zhao, Jiazhi Shu, Yubo Zhao, Tianyu Huang, Jiahao Lu, Zekai Gu, Chengwei Ren, Zhiyang Dou, Qing Shuai, Yuan Liu</div>
             <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 17:52</div>
             <div class="paper-meta"><strong>论文摘要:</strong> In this paper, we find that the generation of 3D human motions and 2D human videos is intrinsically coupled. 3D motions provide the structural prior for plausibility and consistency in videos, while pre-trained video models offer strong generalization capabilities for motions, which necessitate coupling their generation processes. Based on this, we present CoMoVi, a co-generative framework that couples two video diffusion models (VDMs) to generate 3D human motions and videos synchronously within</div>
-            <div class="paper-meta"><strong>核心总结:</strong> 问题：3D人类动作与2D视频生成存在内在耦合关系；方法：提出CoMoVi框架，同步耦合两个视频扩散模型生成3D动作和视频；结果：无。</div>
-        </div>
-        <div class="paper-item">
-            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10629v1" target="_blank">VoiceSculptor: Your Voice, Designed By You</a></div>
-            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10629v1</div>
-            <div class="paper-meta"><strong>作者:</strong> Jingbin Hu, Huakang Chen, Linhan Ma, Dake Guo, Qirui Zhan, Wenhao Li, Haoyu Zhang, Kangxiang Xia, Ziyu Zhang, Wenjie Tian, Chengyou Wang, Jinrui Liang, Shuhan Guo, Zihang Yang, Bengu Wu, Binbin Zhang,</div>
-            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 17:49</div>
-            <div class="paper-meta"><strong>论文摘要:</strong> Despite rapid progress in text-to-speech (TTS), open-source systems still lack truly instruction-following, fine-grained control over core speech attributes (e.g., pitch, speaking rate, age, emotion, and style). We present VoiceSculptor, an open-source unified system that bridges this gap by integrating instruction-based voice design and high-fidelity voice cloning in a single framework. It generates controllable speaker timbre directly from natural-language descriptions, supports iterative refi</div>
-            <div class="paper-meta"><strong>核心总结:</strong> 问题：现有开源文本转语音系统缺乏对语音属性的精细控制；方法：提出VoiceSculptor，整合指令式语音设计与高保真语音克隆；结果：可直接从自然语言描述生成可控的语音音色。</div>
-        </div>
-        <div class="paper-item">
-            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10628v1" target="_blank">Parametric RDT approach to computational gap of symmetric binary perceptron</a></div>
-            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10628v1</div>
-            <div class="paper-meta"><strong>作者:</strong> Mihailo Stojnic</div>
-            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 17:48</div>
-            <div class="paper-meta"><strong>论文摘要:</strong> We study potential presence of statistical-computational gaps (SCG) in symmetric binary perceptrons (SBP) via a parametric utilization of \emph{fully lifted random duality theory} (fl-RDT) [96]. A structural change from decreasingly to arbitrarily ordered $c$-sequence (a key fl-RDT parametric component) is observed on the second lifting level and associated with \emph{satisfiability} ($α_c$) -- \emph{algorithmic} ($α_a$) constraints density threshold change thereby suggesting a potential existen</div>
-            <div class="paper-meta"><strong>核心总结:</strong> 问题：研究对称二进制感知机中统计-计算间隙的存在；方法：使用全提升随机对偶理论；结果：发现c序列结构变化与可满足性与算法约束阈值变化相关。</div>
-        </div>
-        <div class="paper-item">
-            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10615v1" target="_blank">A Bayesian Discrete Framework for Enhancing Decision-Making Processes in Clinical Trial Designs and Evaluations</a></div>
-            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10615v1</div>
-            <div class="paper-meta"><strong>作者:</strong> Paramahansa Pramanik, Arnab Kumar Maity, Anjan Mandal, Haley Kate Robinson</div>
-            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 17:30</div>
-            <div class="paper-meta"><strong>论文摘要:</strong> This study examines the application of Bayesian approach in the context of clinical trials, emphasizing their increasing importance in contemporary biomedical research. While conventional frequentist approach provides a foundational basis for analysis, it often lacks the flexibility to integrate prior knowledge, which can constrain its effectiveness in adaptive settings. In contrast, Bayesian methods enable continual refinement of statistical inferences through the assimilation of accumulating e</div>
-            <div class="paper-meta"><strong>核心总结:</strong> 问题：临床试验中贝叶斯方法的应用；方法：对比传统频率学派方法，强调贝叶斯方法整合先验知识的优势；结果：贝叶斯方法提升适应性场景下的统计推断灵活性。</div>
-        </div>
-        <div class="paper-item">
-            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10609v1" target="_blank">iTIMO: An LLM-empowered Synthesis Dataset for Travel Itinerary Modification</a></div>
-            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10609v1</div>
-            <div class="paper-meta"><strong>作者:</strong> Zhuoxuan Huang, Yunshan Ma, Hongyu Zhang, Hua Ma, Zhu Sun</div>
-            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 17:24</div>
-            <div class="paper-meta"><strong>论文摘要:</strong> Addressing itinerary modification is crucial for enhancing the travel experience as it is a frequent requirement during traveling. However, existing research mainly focuses on fixed itinerary planning, leaving modification underexplored. To bridge this gap, we formally define the itinerary modification task and introduce iTIMO, a dataset specifically tailored for this purpose. We identify the lack of {\itshape need-to-modify} itinerary data as the critical bottleneck hindering research on this t</div>
-            <div class="paper-meta"><strong>核心总结:</strong> 问题：现有研究多关注固定行程规划，缺乏对行程修改的系统研究；方法：定义行程修改任务并引入iTIMO数据集；结果：揭示缺乏“需修改”行程数据是研究瓶颈。</div>
-        </div>
-        <div class="paper-item">
-            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10606v1" target="_blank">RSATalker: Realistic Socially-Aware Talking Head Generation for Multi-Turn Conversation</a></div>
-            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10606v1</div>
-            <div class="paper-meta"><strong>作者:</strong> Peng Chen, Xiaobao Wei, Yi Yang, Naiming Yao, Hui Chen, Feng Tian</div>
-            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 17:23</div>
-            <div class="paper-meta"><strong>论文摘要:</strong> Talking head generation is increasingly important in virtual reality (VR), especially for social scenarios involving multi-turn conversation. Existing approaches face notable limitations: mesh-based 3D methods can model dual-person dialogue but lack realistic textures, while large-model-based 2D methods produce natural appearances but incur prohibitive computational costs. Recently, 3D Gaussian Splatting (3DGS) based methods achieve efficient and realistic rendering but remain speaker-only and i</div>
-            <div class="paper-meta"><strong>核心总结:</strong> 问题：现有Talking head生成方法在多说话人对话场景中存在纹理不真实或计算成本高的问题；方法：采用基于3DGS的方法提升渲染效率与真实感；结果：仍仅支持单说话人，无法处理多说话人交互。</div>
-        </div>
-        <div class="paper-item">
-            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10603v1" target="_blank">Fundamental Limits of Multi-User Distributed Computing of Linearly Separable Functions</a></div>
-            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10603v1</div>
-            <div class="paper-meta"><strong>作者:</strong> K. K. Krishnan Namboodiri, Elizabath Peter, Derya Malak, Petros Elia</div>
-            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 17:17</div>
-            <div class="paper-meta"><strong>论文摘要:</strong> This work establishes the fundamental limits of the classical problem of multi-user distributed computing of linearly separable functions. In particular, we consider a distributed computing setting involving $L$ users, each requesting a linearly separable function over $K$ basis subfunctions from a master node, who is assisted by $N$ distributed servers. At the core of this problem lies a fundamental tradeoff between communication and computation: each server can compute up to $M$ subfunctions,</div>
-            <div class="paper-meta"><strong>核心总结:</strong> 问题：多用户分布式计算线性可分离函数的极限；方法：分析通信与计算之间的权衡；结果：确定服务器计算子函数数量与通信开销的关系。</div>
-        </div>
-    </div>
-    <div class="topic-section">
-        <h2>RNA_structure_prediction</h2>
-        <div class="paper-item">
-            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10660v1" target="_blank">Detecting Winning Arguments with Large Language Models and Persuasion Strategies</a></div>
-            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10660v1</div>
-            <div class="paper-meta"><strong>作者:</strong> Tiziano Labruna, Arkadiusz Modzelewski, Giorgio Satta, Giovanni Da San Martino</div>
-            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 18:30</div>
-            <div class="paper-meta"><strong>论文摘要:</strong> Detecting persuasion in argumentative text is a challenging task with important implications for understanding human communication. This work investigates the role of persuasion strategies - such as Attack on reputation, Distraction, and Manipulative wording - in determining the persuasiveness of a text. We conduct experiments on three annotated argument datasets: Winning Arguments (built from the Change My View subreddit), Anthropic/Persuasion, and Persuasion for Good. Our approach leverages la</div>
-            <div class="paper-meta"><strong>核心总结:</strong> 问题：识别论证文本中的说服策略及其对说服力的影响；方法：分析攻击声誉、分心和操纵性语言等策略；结果：在三个标注数据集上验证了策略与说服力的关系。</div>
-        </div>
-        <div class="paper-item">
-            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10658v1" target="_blank">Transforming Crises into Opportunities: From Chaos to Urban Antifragility</a></div>
-            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10658v1</div>
-            <div class="paper-meta"><strong>作者:</strong> Joseph Uguet, Nicola Tollin, Jordi Morato</div>
-            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 18:26</div>
-            <div class="paper-meta"><strong>论文摘要:</strong> Urban crises - floods, pandemics, economic shocks, and conflicts - function as accelerators of urban change, exposing structural vulnerabilities while creating windows for reinvention. Building on a prior theoretical contribution that identified fifteen principles of urban antifragility, this paper tests and operationalizes the framework through an empirical assessment of 26 cities selected for their post-crisis adaptation trajectories. Using a tailored diagnostic methodology, we benchmark citie</div>
-            <div class="paper-meta"><strong>核心总结:</strong> 问题：城市危机加速城市变革，暴露结构性脆弱并提供重塑机会；方法：基于15项城市抗脆弱原则，对26个经历危机后适应的城市进行实证评估；结果：验证并操作化了城市抗脆弱框架。</div>
-        </div>
-        <div class="paper-item">
-            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10637v1" target="_blank">Measuring the Coronal Magnetic Field with 2D Coronal Seismology: A Forward-Modeling Validation</a></div>
-            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10637v1</div>
-            <div class="paper-meta"><strong>作者:</strong> Zihao Yang, Sarah Gibson, Matthias Rempel, Giuliana de Toma</div>
-            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 17:57</div>
-            <div class="paper-meta"><strong>论文摘要:</strong> In recent years, a two-dimensional (2D) coronal seismology technique applied to spectral-imaging data from the Coronal Multi-channel Polarimeter (CoMP) and UCoMP has enabled routine measurement of the global coronal magnetic field. The technique combines coronal transverse wave phase speed from Doppler measurements with electron densities from the Fe \sc{xiii}\rm{} 10798/10747 Å intensity ratio to infer the magnetic field strength, while the wave propagation directions from Doppler measurements</div>
-            <div class="paper-meta"><strong>核心总结:</strong> 问题：常规测量日冕磁场强度；方法：结合多普勒测量的横波相速和Fe XIII 10798/10747 Å强度比推导电子密度；结果：实现全球日冕磁场的二维磁流体力学测量。</div>
-        </div>
-        <div class="paper-item">
-            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10625v1" target="_blank">Discrete-time maximally superintegrable systems and deformed symmetry algebras: the Calogero-Moser case</a></div>
-            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10625v1</div>
-            <div class="paper-meta"><strong>作者:</strong> Pavel Drozdov, Giorgio Gubbiotti, Danilo Latini</div>
-            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 17:46</div>
-            <div class="paper-meta"><strong>论文摘要:</strong> We determine the complete structure of the symmetry algebras associated with the N-body Calogero-Moser system and its maximally superintegrable discretization. We prove that the discretization naturally leads to a nontrivial deformation of the continuous symmetry algebra, with the discretization parameter playing the rôle of a deformation parameter. This phenomenon illustrates how discrete superintegrable systems can be viewed as natural sources of deformed polynomial algebraic structures. As a</div>
-            <div class="paper-meta"><strong>核心总结:</strong> 问题：N体Calogero-Moser系统及其超可积离散化的对称代数结构；方法：分析离散化对连续对称代数的变形；结果：离散化参数作为变形参数导致非平凡的多项式代数结构。</div>
-        </div>
-        <div class="paper-item">
-            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10619v1" target="_blank">Beyond Hubbard: the role of correlated hopping interaction in superconductors and quantum dot devices</a></div>
-            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10619v1</div>
-            <div class="paper-meta"><strong>作者:</strong> Karol I. Wysokiński, Marcin M. Wysokiński</div>
-            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 17:35</div>
-            <div class="paper-meta"><strong>论文摘要:</strong> We investigate the role of strong Coulomb interactions beyond the standard Hubbard model in two distinct physical contexts. First, we analyze the superconducting phase transition occurring near the Mott metal-insulator transition. Second, we study transport properties of artificial nano-scale structures containing quantum dots coupled to external electrodes. In both cases, we focus on the impact of the correlated (assisted) hopping (CH) interaction. For superconductors, CH acts as a driving mech</div>
-            <div class="paper-meta"><strong>核心总结:</strong> 问题：研究强库仑相互作用在超导相变和量子点输运中的影响；方法：分析关联跃迁（CH）对超导和纳米结构输运的作用；结果：CH在超导中起驱动作用，影响纳米结构的输运特性。</div>
-        </div>
-        <div class="paper-item">
-            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10608v1" target="_blank">On the geometry of aggregate snowflakes</a></div>
-            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10608v1</div>
-            <div class="paper-meta"><strong>作者:</strong> Axel Seifert, Christoph Siewert, Fabian Jakub, Leonie von Terzi, Stefan Kneifel</div>
-            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 17:23</div>
-            <div class="paper-meta"><strong>论文摘要:</strong> Snowflakes play a crucial role in weather and climate. A significant portion of precipitation that reaches the surface originates as ice, even when it ultimately falls as rain. Contrary to the popular image of symmetric, dendritic crystals, most large snowflakes are irregular aggregates formed through the collision of primary ice crystals, such as hexagonal plates, columns, and dendrites. These aggregates exhibit complex, fractal-like structures, particularly at large sizes. Despite this structu</div>
-            <div class="paper-meta"><strong>核心总结:</strong> 问题：大雪片的结构复杂且不规则；方法：研究冰晶碰撞形成的聚集结构；结果：多数大雪片为不规则聚合体，呈现类分形结构。</div>
-        </div>
-        <div class="paper-item">
-            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10601v1" target="_blank">Unifying soft and hard dynamics: The hard current algebra in celestial holography</a></div>
-            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10601v1</div>
-            <div class="paper-meta"><strong>作者:</strong> Reiko Liu, Wen-Jie Ma</div>
-            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 17:15</div>
-            <div class="paper-meta"><strong>论文摘要:</strong> Soft current algebras capture the infrared structure of scattering in asymptotically flat spacetimes, but an analogous algebraic description of finite-energy dynamics has been missing. We uncover an infinite-dimensional hard current algebra that encodes finite-energy contributions to scattering and implies novel Ward identities. The soft current algebras are not independent but arise naturally from the hard ones. This provides a unified algebraic framework underlying quantum theory in flat space</div>
-            <div class="paper-meta"><strong>核心总结:</strong> 问题：缺乏对有限能量动力学的代数描述；方法：发现无限维硬电流代数及其与软电流代数的关系；结果：建立统一的量子理论代数框架。</div>
-        </div>
-        <div class="paper-item">
-            <div class="paper-title"><a href="http://arxiv.org/abs/2601.10599v1" target="_blank">Institutional AI: A Governance Framework for Distributional AGI Safety</a></div>
-            <div class="paper-meta"><strong>arXiv ID:</strong> 2601.10599v1</div>
-            <div class="paper-meta"><strong>作者:</strong> Federico Pierucci, Marcello Galisai, Marcantonio Syrnikov Bracale, Matteo Prandi, Piercosma Bisconti, Francesco Giarrusso, Olga Sorokoletova, Vincenzo Suriani, Daniele Nardi</div>
-            <div class="paper-meta"><strong>更新时间:</strong> 2026-01-15 17:08</div>
-            <div class="paper-meta"><strong>论文摘要:</strong> As LLM-based systems increasingly operate as agents embedded within human social and technical systems, alignment can no longer be treated as a property of an isolated model, but must be understood in relation to the environments in which these agents act. Even the most sophisticated methods of alignment, such as Reinforcement Learning through Human Feedback (RHLF) or through AI Feedback (RLAIF) cannot ensure control once internal goal structures diverge from developer intent. We identify three</div>
-            <div class="paper-meta"><strong>核心总结:</strong> 问题：LLM代理在复杂环境中运行，传统对齐方法难以确保其行为符合开发者意图；方法：分析RLHF和RLAIF等对齐技术的局限性；结果：内部目标结构可能偏离开发者的意图。</div>
+            <div class="paper-meta"><strong>核心总结:</strong> 问题：3D人体动作与2D视频生成存在内在耦合关系；方法：提出CoMoVi框架，同步生成3D动作和视频；结果：无。</div>
         </div>
     </div>
 
